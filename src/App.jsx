@@ -18,6 +18,16 @@ function App() {
  
     <div className="App">
 
+{featPupId && (
+        <div>
+          <h2>{featuredPup.name}</h2>
+          <ul>
+            <li>Age: {featuredPup.age}</li>
+            <li>Email: {featuredPup.email}</li>
+          </ul>
+        </div>
+      )}
+
       {puppies.map((puppy) => {
         return (
           <p onClick={() => {
@@ -31,15 +41,7 @@ function App() {
         );
       })}
 
-{featPupId && (
-        <div>
-          <h2>{featuredPup.name}</h2>
-          <ul>
-            <li>Age: {featuredPup.age}</li>
-            <li>Email: {featuredPup.email}</li>
-          </ul>
-        </div>
-      )}
+
     </div>
 
   );
